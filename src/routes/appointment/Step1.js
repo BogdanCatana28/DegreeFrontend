@@ -21,9 +21,7 @@ export default function Step1({ getServiceInfo, currentData }) {
   useEffect(() => {
     RequestInstance.get('http://localhost:8080/procedures')
       .then(response => {
-        // if (!response.ok) {
-        //   throw new Error('Network response was not ok');
-        // }
+
         return response.data;
       })
       .then(data => {
@@ -83,4 +81,3 @@ export default function Step1({ getServiceInfo, currentData }) {
     </Box>
   );
 }
-//It's not recomanded to use inline style.

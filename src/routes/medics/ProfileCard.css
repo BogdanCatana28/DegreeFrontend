@@ -14,8 +14,6 @@
   
 
 .medic-header {
-	/*background-image: url("../../public/images/bg-pattern-card.svg");*/
-	/*background-image: url("./background-colorful-1.png");*/
 	background-position: 0px 0px;
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -62,7 +60,6 @@
 	padding-bottom: 10px;
 }
 
-/* SOCIAL STATS */
 .medic-smaller-text {
 	font-weight: normal;
 	font-size: 0.8rem;

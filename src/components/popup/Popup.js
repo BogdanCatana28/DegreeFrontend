@@ -22,7 +22,7 @@ const CustomPopup = ({ message }) => {
     </div>
   ) : null;
 };
-//You don't use CustomPopup here, make a separated component. 
+
 const Popup = ({ message, isVisible, setIsVisible, link}) => {
 
     const navigate = useNavigate();

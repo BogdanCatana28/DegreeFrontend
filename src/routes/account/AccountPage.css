@@ -1,4 +1,3 @@
-/* The whole page */
 .account-page {
     display: flex;
     flex-direction: column;
@@ -10,7 +9,7 @@
     background-repeat: no-repeat;
 }
 
-/* Account page resizable */
+
 @media (max-height: 1200px) {
     .big-form-component-resize {
         min-height: 100vh;
@@ -22,8 +21,6 @@
     }
 }
 
-/* Preferences page resizable */
-/* With the small form component */
 @media (max-height: 385px) {
     .small-form-component-resize {
         min-height: 100vh;
@@ -35,12 +32,10 @@
     }
 }
 
-/* Small form component should stick at the top */
 .small-form-component-resize {
     justify-content: unset;
 }
 
-/* Account / Preferences buttons design */
 .routing-buttons{
     z-index: 10;
 }
@@ -65,7 +60,6 @@
     touch-action: manipulation;
 }
 
-/* Adds the green background rectangle thing */
 .account-navigation-button:after {
     content: "";
     background-color: #74a872;
@@ -78,22 +72,17 @@
     transition: 0.2s;
 }
 
-/* Makes green background move */
 .account-navigation-button:hover:after {
     top: 0;
     left: 0;
 }
 
-/* Makes buttons bigger for bigger screens & smaller for smaller screens */
 @media (min-width: 768px) {
     .account-navigation-button {
         padding: 13px 50px 13px;
     }
 }
 
-/*  FORM  */
-
-/* The style for the div that wraps the form */
 .green-form {
     background-image: linear-gradient(#FDFBEF, #daf5e1);
     border-radius: 10px;
@@ -105,12 +94,12 @@
     margin-top: 2px;
 }
 
-/* Labels */
+
 .field-label {
     color: #30592e;
 }
 
-/* Inputs */
+
 .green-form input[type="text"],
 .green-form input[type="email"],
 .green-form input[type="password"],
@@ -130,7 +119,6 @@
     background-color: #e8e7e1;
 }
 
-/* Information paragraph */
 .extra-info p {
     color: #535752;
     font-size: smaller;
@@ -144,13 +132,11 @@
     align-items: center;
 }
 
-/* Placeholders less visible */
 .green-form input[type="text"]::placeholder,
 .green-form input[type="email"]::placeholder{
     color: #b3b3b3;
 }
 
-/* Update password/avatar/prefereneces buttons */
 .form-delete-button,
 .form-submit-button {
     background: #74a872;
@@ -165,7 +151,6 @@
     width: 100%;
 }
 
-/* Error message takes space when is not shown */
 .hidden-error-message {
     visibility: hidden;
 }
@@ -190,20 +175,17 @@
     background: #bd2b11;
 }
 
-/* Error input field design */
 .account-form .add-patient-form-group .red-error-message {
     border: none;
     border-bottom: 2px solid red;
 }
 
-/* Error message design */
 .account-form .input-error-message {
     color: red;
     margin-top: 5px;
     font-size: 12px;
 }
 
-/* Options in select */
 .preferences-form-option {
     width: 100%;
     padding: 12px;

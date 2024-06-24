@@ -246,8 +246,6 @@ button.ghost {
     align-items: center; 
 }
 
-/* Coponenta sa stea fixa pe mijloc
-   daca intaltimea ecranului e mai mare ca ea */
 @media (max-height: 925px) {
     .sign-up-form-resize {
         min-height: 100vh;

@@ -23,7 +23,7 @@ function AddProcedure() {
     return /^[0-9]*$/.test(string);
   }
   const [specializationOptions, setSpecializationOptions] = useState([
-    'PATHOLOGIST', 'SMALL_ANIMAL', 'ANESTHESIOLOGY', 'DENTISTRY', 'SURGERY'// Add your specialization options here
+    'PATHOLOGIST', 'SMALL_ANIMAL', 'ANESTHESIOLOGY', 'DENTISTRY', 'SURGERY'
   ]);
 
   const { name, duration, price, specializations, anesthesia } = procedure;
@@ -49,7 +49,7 @@ function AddProcedure() {
 
   const removeLastSpecialization = () => {
     if (specializations.length > 0) {
-      const updatedSpecializations = specializations.slice(0, -1); // Remove the last element
+      const updatedSpecializations = specializations.slice(0, -1);
       setProcedure({
         ...procedure,
         specializations: updatedSpecializations,
@@ -70,7 +70,7 @@ function AddProcedure() {
       setIsPopupVisible(true);
       setPopupMessage("Procedure deleted successfully! Redirecting...");
       setPopupMessageType("success");
-      // navigate('/admin/dashboard/procedures');
+
     } catch (error) {
       console.error('Error adding procedure:', error);
       setIsPopupVisible(true);
@@ -86,7 +86,7 @@ function AddProcedure() {
   useEffect(() => {
     const handleBackspace = (e) => {
       if (e.keyCode === 8) {
-        // 8 is the keycode for Backspace
+
         removeLastSpecialization();
       }
     };
@@ -220,4 +220,3 @@ function AddProcedure() {
 }
 
 export default AddProcedure;
-//Make a convensions to the name of files, or add-procedures.css, edit-procedures.css, or EditProcedures, AddProcedures, a prefer the second one

@@ -7,11 +7,10 @@ const ViewProcedure = () => {
   const [procedure, setProcedure] = useState({});
   const [error, setError] = useState(null);
 
-  // Get the procedure ID from the URL using useParams
   const { id } = useParams();
 
   useEffect(() => {
-    // Fetch the procedure by its ID when the component mounts
+
     ProcedureService.showProcedureById(id)
       .then((response) => {
         setProcedure(response.data);
@@ -27,9 +26,8 @@ const ViewProcedure = () => {
           eventBus.dispatch('logout');
         }
       });
-  }, [id]); // Include 'id' in the dependency array to fetch the procedure when 'id' changes
+  }, [id]);
 
-  // Join the specializations array with both spaces and commas
   const specializationsString = procedure.specializations
     ? procedure.specializations.join(', ')
     : '';

@@ -9,8 +9,7 @@ export const checkTokenExpiration = async (accessToken, dispatch) => {
   const expirationTime = decodedJwt.exp * 1000;
   const currentTime = Date.now();
 
-  // Check if the token is about to expire (e.g., 5 minutes before expiration)
-  const tokenThreshold = 1 * 60 * 1000; // 5 minutes in milliseconds
+  const tokenThreshold = 1 * 60 * 1000;
   if (expirationTime - currentTime <= tokenThreshold) {
     try {
       const rs = await axiosInstance.post("/auth/refresh-token", {
@@ -22,13 +21,12 @@ export const checkTokenExpiration = async (accessToken, dispatch) => {
       dispatch(refreshToken(accessToken));
       TokenService.updateLocalAccessToken(accessToken);
 
-      // Schedule the next token check (e.g., every 4 minutes)
-      setTimeout(() => checkTokenExpiration(accessToken, dispatch), 1 * 60 * 1000); // 4 minutes in milliseconds
+      setTimeout(() => checkTokenExpiration(accessToken, dispatch), 1 * 60 * 1000);
     } catch (error) {
       
       dispatch(logout());
     }
   } else {
-    setTimeout(() => checkTokenExpiration(accessToken, dispatch), 1* 60 * 1000); // 4 minutes in milliseconds
+    setTimeout(() => checkTokenExpiration(accessToken, dispatch), 1* 60 * 1000);
   }
 };

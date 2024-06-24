@@ -14,7 +14,7 @@ const initialState = {
 export const addPatient = createAsyncThunk(
     "addPatient",
     async ({
-               //patient
+
                patientName,
                patientAgeYears,
                patientAgeMonths,
@@ -25,7 +25,7 @@ export const addPatient = createAsyncThunk(
                patientBreed,
                patientColour,
                patientMedicalHistoryBeforeClinic,
-               // owner
+
                firstName,
                lastName,
                email,
@@ -35,7 +35,7 @@ export const addPatient = createAsyncThunk(
                userAlreadyRegistered}, thunkAPI) => {
         try {
             const response = await medicService.addPatient(
-                //patient
+
                 patientName,
                 patientAgeYears,
                 patientAgeMonths,
@@ -46,7 +46,7 @@ export const addPatient = createAsyncThunk(
                 patientBreed,
                 patientColour,
                 patientMedicalHistoryBeforeClinic,
-                // owner
+
                 firstName,
                 lastName,
                 email,
@@ -70,7 +70,7 @@ export const addPatient = createAsyncThunk(
 export const addConsultation = createAsyncThunk(
     "addConsultation",
     async ({
-               //patient
+
                patientId,
                patientName,
                patientBirthdate,
@@ -79,13 +79,13 @@ export const addConsultation = createAsyncThunk(
                patientSex,
                patientBreed,
                patientColour,
-               // owner
+
                ownerFName,
                ownerLName,
                ownerEmail,
                ownerAddress,
                ownerPhone,
-               //consultation
+
                consultMainConcern,
                historyOfConcern,
                consultDiagnostic,
@@ -93,7 +93,7 @@ export const addConsultation = createAsyncThunk(
                consultExtraNotes }, thunkAPI) => {
         try {
             const response = await medicService.addConsultation(
-                //patient
+
                 patientId,
                 patientName,
                 patientBirthdate,
@@ -102,13 +102,13 @@ export const addConsultation = createAsyncThunk(
                 patientSex,
                 patientBreed,
                 patientColour,
-                // owner
+
                 ownerFName,
                 ownerLName,
                 ownerEmail,
                 ownerAddress,
                 ownerPhone,
-                //consultation
+
                 consultMainConcern,
                 historyOfConcern,
                 consultDiagnostic,
@@ -131,19 +131,19 @@ const medicSlice = createSlice({
     name: 'user',
     initialState,
     extraReducers: {
-        // *********** ADD PATIENT ************ */
+
         [addPatient.fulfilled]: (state, action) => {
-            //smth
+
         },
         [addPatient.rejected]: (state, action) => {
-            //smth
+
         },
-        // *********** ADD CONSULTATION ************ */
+
         [addConsultation().fulfilled]: (state, action) => {
-            //smth
+
         },
         [addConsultation.rejected]: (state, action) => {
-            //smth
+
         }
     }
 });

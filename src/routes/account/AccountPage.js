@@ -14,9 +14,6 @@ function AccountPage() {
     useEffect(() => {
         const boi = RequestInstance.get(`http://localhost:8080/users/${user.id}`)
             .then(response => {
-                // if (!response.ok) {
-                //   throw new Error('Network response was not ok');
-                // }
                 console.log("data1");
                 console.log(response.data);
                 return response.data;
@@ -36,7 +33,7 @@ function AccountPage() {
         boi2();
     }, []);
 
-    console.log("after"); //AccountPageForm preloadedData={data}
+    console.log("after");
 
     return (
         data ?

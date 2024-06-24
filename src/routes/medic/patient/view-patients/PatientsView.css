@@ -1,5 +1,4 @@
 
-/* patient profile */
 .patient-profile-size {
   min-height: 100vh;
 }
@@ -47,8 +46,8 @@
   font-size: 1.5rem;
   margin-bottom: 1rem;
   display: flex;
-  justify-content: center; /* Horizontally center */
-  align-items: center; /* Vertically center, if needed */
+  justify-content: center;
+  align-items: center;
 }
 
 .card-body {
@@ -158,12 +157,7 @@
 .patient-bold-text {
   font-weight: bold;
 }
-/* .patient-card-color li{
-  background-color: #bce0ca!important;
-}
-.patient-card-color ul{
-  background-color: #bce0ca!important;
-} */
+
 .card-body-patient {
   display: flex;
   flex-direction: column;

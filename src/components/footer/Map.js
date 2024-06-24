@@ -30,4 +30,3 @@ const Map = () => {
 };
 
 export default Map;
-//Change spaces into 2, not 4.

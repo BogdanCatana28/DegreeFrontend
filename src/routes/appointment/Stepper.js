@@ -128,10 +128,8 @@ export default function VerticalLinearStepper() {
 
         if (response.ok) {
             setUserPreferenceStatus("User preference saved!");
-            //alert("Saved");
         } else {
             setUserPreferenceStatus("User preference already saved!");
-            //alert("Preference already saved!");
         }
     };
 

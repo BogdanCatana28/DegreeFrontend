@@ -145,7 +145,6 @@ const RegisterMedic = () => {
                                                         component="div"
                                                         className="input-error-message"
                                                     /> :
-                                                    // Used to take space on the page when there is no error
                                                     <span className="hidden-error-message">Error</span>}
                                             </div>
                                         </div>
@@ -162,7 +161,6 @@ const RegisterMedic = () => {
                                                         component="div"
                                                         className="input-error-message"
                                                     /> :
-                                                    // Used to take space on the page when there is no error
                                                     <span className="hidden-error-message">Error</span>}
                                             </div>
                                         </div>
@@ -179,7 +177,6 @@ const RegisterMedic = () => {
                                                         component="div"
                                                         className="input-error-message"
                                                     /> :
-                                                    // Used to take space on the page when there is no error
                                                     <span className="hidden-error-message">Error</span>}
                                             </div>
                                         </div>
@@ -197,7 +194,6 @@ const RegisterMedic = () => {
                                                         component="div"
                                                         className="input-error-message"
                                                     /> :
-                                                    // Used to take space on the page when there is no error
                                                     <span className="hidden-error-message">Error</span>}
                                             </div>
                                         </div>
@@ -215,7 +211,6 @@ const RegisterMedic = () => {
                                                         component="div"
                                                         className="input-error-message"
                                                     /> :
-                                                    // Used to take space on the page when there is no error
                                                     <span className="hidden-error-message">Error</span>}
                                             </div>
                                         </div>
@@ -238,7 +233,6 @@ const RegisterMedic = () => {
                                                         component="div"
                                                         className="input-error-message"
                                                     /> :
-                                                    // Used to take space on the page when there is no error
                                                     <span className="hidden-error-message">Error</span>}
                                             </div>
                                         </div>
@@ -257,7 +251,6 @@ const RegisterMedic = () => {
                                                         component="div"
                                                         className="input-error-message"
                                                     /> :
-                                                    // Used to take space on the page when there is no error
                                                     <span className="hidden-error-message">Error</span>}
                                             </div>
                                         </div>
@@ -274,7 +267,6 @@ const RegisterMedic = () => {
                                                         component="div"
                                                         className="input-error-message"
                                                     /> :
-                                                    // Used to take space on the page when there is no error
                                                     <span className="hidden-error-message">Error</span>}
                                             </div>
                                         </div>
@@ -300,7 +292,6 @@ const RegisterMedic = () => {
                                                         component="div"
                                                         className="input-error-message"
                                                     /> :
-                                                    // Used to take space on the page when there is no error
                                                     <span className="hidden-error-message">Error</span>}
                                             </div>
                                         </div>

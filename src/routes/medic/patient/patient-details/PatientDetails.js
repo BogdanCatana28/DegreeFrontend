@@ -22,7 +22,6 @@ function PatientDetails() {
     useEffect(() => {
         loadPatient();
         loadConsultations();
-        // eslint-disable-next-line
     }, []);
 
     const loadPatient = async () => {
@@ -37,7 +36,6 @@ function PatientDetails() {
     const loadConsultations = async () => {
         try {
           const response = await requestInstance.get(`http://localhost:8080/consultations/consultations/by-patient/${id}`);
-          // Sort the consultations by date in descending order
           const sortedConsultations = response.data.sort((a, b) => new Date(b.consultationCreationDate) - new Date(a.consultationCreationDate));
           setConsultations(sortedConsultations);
           console.log(sortedConsultations);
@@ -50,12 +48,10 @@ function PatientDetails() {
         <div className='container patient-profile-size'>
             <div className='row'>
                 <div className='col-md-12'>
-                    {/* Boxul mare pentru detalii pacient */}
                     <div className='border rounded p-4 m-4 shadow'>
                         <h2 className='text-center m-4 fs-1 patient-bold-text'>Patient Profile</h2>
                         <div className='row'>
                             <div className='col-md-6'>
-                                {/* Sub-box pentru detalii pacient */}
                                 <div className='card mb-4 patient-card-color'>
                                     <div className='card-header fs-4 patient-bold-text'>
                                         Patient Details
@@ -89,7 +85,6 @@ function PatientDetails() {
                                 </div>
                             </div>
                             <div className='col-md-6'>
-                                {/* Sub-box pentru detalii proprietar */}
                                 <div className='card patient-card-color'>
                                     <div className='card-header fs-4 patient-bold-text'>
                                         Owner Details

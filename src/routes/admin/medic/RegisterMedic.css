@@ -1,12 +1,9 @@
-/* Size and alignment for the wrapper div */
 .add-medic-form-center {
     display: flex;
     justify-content: center;
     width: 100%;
 }
 
-/* ==== RESIZABLE ==== */
-/* skinny screen */
 @media (max-width: 805px) {
     .add-medic-component-resize-width {
         display: flex;
@@ -14,7 +11,7 @@
         justify-content: center;
         align-items: center;
     }
-    /* big height => elements stick in middle */
+
     @media (min-height: 1395px) {
         .add-medic-component-resize-height {
             height: calc(100vh - 80px);
@@ -24,21 +21,21 @@
             align-items: center;
         }
     }
-    /* small height => elements get scroll bar */
+
     @media (max-height: 1395px) {
         .add-medic-component-resize-height {
             min-height: 100vh;
         }
     }
 }
-/* wide screen */
+
 @media (min-width: 805px) {
     .add-medic-component-resize-width {
         display: flex;
         flex-direction: row;
         justify-content: center;
     }
-    /* big height => elements stick in middle */
+
     @media (min-height: 815px) {
         .add-medic-component-resize-height {
             height: calc(100vh - 80px);
@@ -48,13 +45,10 @@
             align-items: center;
         }
     }
-    /* small height => elements get scroll bar */
+
     @media (max-height: 815px) {
         .add-medic-component-resize-height {
             min-height: 100vh;
-            /*justify-content: center;*/
-            /*align-items: center;*/
-            /*display: flex;*/
         }
     }
 }
@@ -63,12 +57,10 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    /*align-items: center;*/
     width: 100%;
 }
 
 
-/* ==== FORM TITLE ==== */
 .add-medic-form-title h1 {
     position: relative;
     padding: 0;
@@ -108,16 +100,13 @@
     margin-bottom: 20px;
 }
 
-
-/* ==== FORM ==== */
-/* Form card style */
 .add-medic-form-card {
     opacity: 0.85;
     border-radius: 10px;
     padding: 10px;
     margin: 10px;
 }
-/* Background style */
+
 .add-medic-form-card-background {
     background-image: linear-gradient(#FAF0E1, #D9FBF9);
     opacity: 0.85;
@@ -125,7 +114,7 @@
     padding: 10px;
     margin: 10px;
 }
-/* Form inputs */
+
 .add-medic-form-card input[type="text"],
 .add-medic-form-card input[type="email"],
 .add-medic-form-card input[type="password"],
@@ -142,7 +131,7 @@
     border-radius: 5px;
     box-sizing: border-box;
 }
-/* Submit button */
+
 .add-medic-form-submit-button {
     background: #549693;
     color: #fff;
@@ -157,41 +146,40 @@
 .add-medic-form-submit-button:hover {
     background: #1E6A67;
 }
-/* Form groups */
-/* A div with the label, input field and error */
+
 .add-medic-form-card .add-medic-form-group {
     margin-top: 2px;
 }
-/* Form labels */
+
 .add-medic-form-card .add-medic-form-group .add-medic-form-label {
     color: #136864;
     font-weight: bold;
 }
-/* Colour for the specializations */
+
 .add-medic-form-card .add-medic-form-group .add-medic-form-specialization-label {
     color: #136864;
 }
-/* Error message design */
+
 .add-medic-form-card .input-error-message {
     color: red;
     margin-top: 5px;
     font-size: 12px;
 }
-/* Error message takes space when is not shown */
+
 .hidden-error-message {
     visibility: hidden;
 }
-/* Error input field design */
+
 .add-medic-form-card .add-medic-form-group .red-error-message {
     border: none;
     border-bottom: 2px solid red;
 }
 
-/* Input placeholder */
+
 .add-medic-form-card .add-medic-form-group input::placeholder {
     color: #d5dbe3;
 }
-/* Padding for in between the radio buttons */
+
 .add-medic-form-card .add-medic-padding-item {
     padding: 5px;
 }

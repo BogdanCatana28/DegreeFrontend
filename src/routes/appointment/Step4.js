@@ -30,7 +30,6 @@ function Step4({getFormValues, currentData, setPetDetails}) {
         }
     }, [currentData]);
 
-    //load preferences
     useEffect(() => {
         console.log(user)
         if(user===null)

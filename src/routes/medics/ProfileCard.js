@@ -49,6 +49,3 @@ function ProfileCard(props) {
 }
 
 export default ProfileCard;
-
-//Don't use same name for multiple functions in app. You have ProfileCard here and in AdminProfileCard
-//A good practice, it's to implement the component in a common folder, and import where you needed.

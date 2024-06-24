@@ -11,8 +11,6 @@
 }
 
 .medic-component {
-    /*display: flex;*/
-    /*justify-content: center;*/
     width: 100%;
     background-image: url("background_teporary.png");
     background-size: cover;

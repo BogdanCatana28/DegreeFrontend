@@ -29,7 +29,6 @@ import moment from "moment";
 import requestInstance from "../../../utils/RequestInstance";
 import TimedPopup from "../../../components/popup/TimedPopup";
 import "./Shifts.css";
-//--------------------------------------DATA--------------------------------------------------------
 
 const colorPalette = ["#26c6da", "#26a69a", "#2cd0bd", "#0288d1", "#03a9f4", "#18ffff"];
 
@@ -40,7 +39,7 @@ const classes = {
     commandButton: `commandButton`,
 };
 
-//--------------------------------------TODAY-STYLE--------------------------------------------------------
+
 const StyledWeekViewTimeTableCell = styled(WeekView.TimeTableCell)(({theme}) => ({
     [`&.${classes.todayCell}`]: {
         backgroundColor: alpha("#43a047", 0.2),
@@ -64,10 +63,6 @@ const TimeTableCell = (props) => {
     return <StyledWeekViewTimeTableCell {...props} />;
 };
 
-
-//-----------------------------------------------APPOINTMENT-FROM---------------------------------------------
-
-//--------------------------------------CALENDAR--------------------------------------------------------
 
 function Shifts() {
 
@@ -205,7 +200,6 @@ function Shifts() {
         };
         setData().catch((error) => {
             console.log(error);
-            // alert(error.response.data.message);
             setPopupMessage(error.response.data.message);
             setShowPopup(true);
             setMessageType("error");
@@ -410,7 +404,6 @@ function Shifts() {
                 if (added.days === 1) {
                     addedItem = await addShift(added);
                     if (addedItem.message !== undefined) {
-                        // alert(addedItem.message)
                         setPopupMessage(addedItem.message);
                         setShowPopup(true);
                         setMessageType("error");
@@ -421,7 +414,6 @@ function Shifts() {
                 } else {
                     addedItem = await addDayOff(added);
                     if (addedItem.message !== undefined) {
-                        // alert(addedItem.message)
                         setPopupMessage(addedItem.message);
                         setShowPopup(true);
                         setMessageType("error");
@@ -444,7 +436,6 @@ function Shifts() {
                         if (arg.status === true) {
                             const response = await updateAppointment(arg.appointment);
                             if (response.message !== undefined) {
-                                // alert(response.message)
                                 setPopupMessage(response.message);
                                 setShowPopup(true);
                                 setMessageType("error");
@@ -458,7 +449,6 @@ function Shifts() {
                             appointment.days = changedAppointment.days ? changedAppointment.days : appointment.days;
                             appointment.allDay = changedAppointment.allDay ? changedAppointment.allDay : appointment.allDay;
                         } else {
-                            // alert(arg.message);
                             setPopupMessage(arg.message);
                             setShowPopup(true);
                             setMessageType("error");
@@ -568,5 +558,3 @@ function Shifts() {
 
 
 export default Shifts;
-
-//The file it's too big 

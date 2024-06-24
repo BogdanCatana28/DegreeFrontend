@@ -12,7 +12,7 @@ const addPatient = (patientName,
                     patientBreed,
                     patientColour,
                     patientMedicalHistoryBeforeClinic,
-                    // owner
+
                     firstName,
                     lastName,
                     email,
@@ -31,7 +31,7 @@ const addPatient = (patientName,
         patientBreed,
         patientColour,
         patientMedicalHistoryBeforeClinic,
-    // owner
+
         owner:{
             firstName : firstName,
             lastName : lastName,
@@ -45,7 +45,7 @@ const addPatient = (patientName,
 };
 
 const addConsultation = (
-    //patient
+
     patientId,
     patientName,
     patientBirthdate,
@@ -54,13 +54,13 @@ const addConsultation = (
     patientGender,
     patientBreed,
     patientColour,
-    // owner
+
     ownerFirstName,
     ownerLastName,
     ownerEmail,
     ownerAddress,
     ownerPhone,
-    //consultation
+
     consultationMainConcern,
     consultationHistoryOfConcern,
     consultationDiagnostic,

@@ -9,7 +9,6 @@ export default function ConsultationPage() {
     const [data, setData] = useState(null);
 
     const user = TokenService.getUser();
-    //remove the variables what you don't use
     const { id } = useParams();
 
     console.log("id:");
@@ -23,9 +22,7 @@ export default function ConsultationPage() {
         console.log("apel");
         const boi = RequestInstance.get(`http://localhost:8080/patients/${id}`)
             .then(response => {
-                // if (!response.ok) {
-                //   throw new Error('Network response was not ok');
-                // }
+
                 console.log("data1");
                 console.log(response.data);
                 setData(response.data)
@@ -48,18 +45,14 @@ export default function ConsultationPage() {
         boi2();
     }, []);
 
-    console.log("after"); //AccountPageForm preloadedData={data}
+    console.log("after");
 
     return (
         data ?
             <>
                 <ConsultationPageForm preloadedData={data}/>
-            {/*    why form get data*/}
             </>
             :
             <div>Loading...</div>
-
-    //todo     add some loading animation + error handling if not loaded
-        // todo if he modifies fields from the patient form, they should update in bd
     );
 }

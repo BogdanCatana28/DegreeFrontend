@@ -1,11 +1,8 @@
-/* whole page */
 .add-patient-form-wrapper{
     display: flex;
     justify-content: center;
 }
 
-/* ==== RESIZABLE ==== */
-/* skinny screen */
 @media (max-width: 1060px) {
     .component-resize-width {
         display: flex;
@@ -13,7 +10,7 @@
         justify-content: center;
         align-items: center;
     }
-    /* big height => elements stick in middle */
+
     @media (min-height: 2150px) {
         .component-resize-height {
             height: calc(100vh - 80px);
@@ -23,21 +20,21 @@
             align-items: center;
         }
     }
-    /* small height => elements get scroll bar */
+
     @media (max-height: 2150px) {
         .component-resize-height {
             min-height: 100vh;
         }
     }
 }
-/* wide screen */
+
 @media (min-width: 1060px) {
     .component-resize-width {
         display: flex;
         flex-direction: row;
         justify-content: center;
     }
-    /* big height => elements stick in middle */
+
     @media (min-height: 1290px) {
         .component-resize-height {
             height: calc(100vh - 80px);
@@ -47,7 +44,7 @@
             align-items: center;
         }
     }
-    /* small height => elements get scroll bar */
+
     @media (max-height: 1290px) {
         .component-resize-height {
             min-height: 100vh;
@@ -55,8 +52,6 @@
     }
 }
 
-
-/* ==== FORM TITLE ==== */
 .green-patient-form-title h1 {
     position: relative;
     padding: 0;
@@ -96,15 +91,10 @@
     margin-bottom: 20px;
 }
 
-
-/* ==== FORM SUBTITLE ==== */
 .green-patient-form-subtitle {
     margin-bottom: 15px;
 }
 
-
-/* ==== FORM ==== */
-/* Form card style */
 .add-patient-form-card {
     background-image: linear-gradient(#FDFBEF, #daf5e1);
     opacity: 0.85;
@@ -112,7 +102,7 @@
     padding: 30px;
     margin: 10px;
 }
-/* Form inputs */
+
 .add-patient-form-card input[type="text"],
 .add-patient-form-card input[type="email"],
 .add-patient-form-card input[type="password"],
@@ -130,14 +120,14 @@
     border-radius: 5px;
     box-sizing: border-box;
 }
-/* Options in select */
+
 .add-patient-form-card .add-patient-form-option {
     width: 100%;
     padding: 12px;
     border-radius: 5px;
     border: 1px solid #ccc;
 }
-/* Submit button */
+
 .add-patient-form-submit-button {
     background: #74a872;
     color: #fff;
@@ -152,41 +142,40 @@
 .add-patient-form-submit-button:hover {
     background: #3e733c;
 }
-/* Form groups */
-/* A div with the label, input field and error */
+
 .add-patient-form-card .add-patient-form-group {
     margin-top: 2px;
 }
-/* Form labels */
+
 .add-patient-form-card .add-patient-form-label {
     color: #30592e;
 }
-/* Selected option */
+
 .add-patient-form-card option::selection,
 .add-patient-form-card option:checked{
     background-color: #74a872;
 }
-/* Error message design */
+
 .add-patient-form-card .input-error-message {
     color: red;
     margin-top: 5px;
     font-size: 12px;
 }
-/* Error message takes space when is not shown */
+
 .hidden-error-message {
     visibility: hidden;
 }
-/* Error input field design */
+
 .add-patient-form-card .add-patient-form-group .red-error-message {
     border: none;
     border-bottom: 2px solid red;
 }
-/* Input placeholder */
+
 .add-patient-form-card .add-patient-form-group input::placeholder,
 .add-patient-form-card .add-patient-form-group textarea::placeholder {
     color: #d5dbe3;
 }
-/* The style for the "select a user" option */
+
 .add-patient-form-card .select-user-option-header {
     background-color: #d2d9d4;
     width: 100%;
@@ -194,23 +183,23 @@
     border-radius: 5px;
     border: 1px solid #ccc;
 }
-/* Padding for in between the radio buttons */
+
 .add-patient-form-card .add-patient-padding-item {
     padding: 8px;
 }
-/* Years and months displayed in line */
+
 .add-patient-form-card .add-patient-form-inline-display-age {
     display: flex;
     flex-direction: row;
 }
-/* To make the Years and Moths spaced */
+
 .add-patient-form-card .add-patient-form-element-margin-left {
     margin-left: 10px;
 }
 .add-patient-form-card .add-patient-form-element-margin-right {
     margin-right: 10px;
 }
-/* To add spacing around the Yes and No for registered */
+
 .add-patient-form-card .add-patient-form-registered-group {
     margin: 10px;
 }

@@ -28,7 +28,7 @@ function EditProcedure() {
   const loadProcedure = async () => {
     try {
       const result = await ProcedureService.showProcedureById(id);
-      // Pre-fill the form fields with existing procedure data
+
       setProcedure(result.data);
     } catch (error) {
       console.error('Error loading procedure:', error);
@@ -59,7 +59,7 @@ function EditProcedure() {
   const removeLastSpecialization = () => {
     if (procedure.specializations.length > 0) {
       const updatedSpecializations = [...procedure.specializations];
-      updatedSpecializations.pop(); // Remove the last element
+      updatedSpecializations.pop();
       setProcedure({
         ...procedure,
         specializations: updatedSpecializations,
@@ -69,7 +69,7 @@ function EditProcedure() {
 
   const handleBackspace = (e) => {
     if (e.keyCode === 8 && e.target.value === '') {
-      // Handle Backspace key press and the input field is empty
+
       removeLastSpecialization();
     }
   };
@@ -94,7 +94,7 @@ function EditProcedure() {
       setIsPopupVisible(true);
       setPopupMessage("Procedure updated! Redirecting...");
       setPopupMessageType("success");
-      // navigate('/admin/dashboard/procedures');
+
     } catch (error) {
       setIsPopupVisible(true);
       if(/parse/.test( error.response.data.message) === true){
@@ -127,7 +127,7 @@ function EditProcedure() {
                 className=" "
                 placeholder="Enter procedure Name"
                 name="name"
-                value={procedure.name} // Pre-fill the name field
+                value={procedure.name}
                 onChange={(e) => onInputChange(e)}
               />
             </div>
@@ -140,7 +140,7 @@ function EditProcedure() {
                 className=" "
                 placeholder="Enter Procedure duration"
                 name="duration"
-                value={procedure.duration} // Pre-fill the duration field
+                value={procedure.duration}
                 onChange={(e) => onInputChange(e)}
               />
             </div>
@@ -153,7 +153,7 @@ function EditProcedure() {
                 className=" "
                 placeholder="Enter procedure price"
                 name="price"
-                value={procedure.price} // Pre-fill the price field
+                value={procedure.price}
                 onChange={(e) => onInputChange(e)}
               />
             </div>
@@ -166,9 +166,9 @@ function EditProcedure() {
                 className=" "
                 placeholder="Enter Procedure specializations (comma-separated)"
                 name="specializations"
-                value={procedure.specializations.join(',')} // Pre-fill the specializations field
+                value={procedure.specializations.join(',')}
                 onChange={(e) => onInputChange(e)}
-                onKeyDown={handleBackspace} // Handle Backspace key press
+                onKeyDown={handleBackspace}
               />
               <div className="specializations-dropdown edit-procedure-transparent">
                 <ul>

@@ -77,7 +77,6 @@ const Register = () => {
     setSuccessful(false);
     AuthService.register(firstName, lastName, email, address, phone, password)
       .then(() => {
-        // setSuccessful(true);
         setPopupMessage("Account created successfully! Redirecting...");
         setPopupMessageType("success");
         setIsPopupVisible(true);

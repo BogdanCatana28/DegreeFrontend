@@ -34,4 +34,3 @@ function CardItem(props) {
 }
 
 export default CardItem;
-//If you write class for components, you need a css file. Here you have some classes, but your declaration is in Cards.css, and import is in Cards.js. If you import this component in another file, you don't have the same style.

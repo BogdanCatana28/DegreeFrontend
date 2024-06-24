@@ -35,14 +35,14 @@ const Procedures = () => {
   const deleteProcedure = (id) => {
     ProcedureService.deleteProcedure(id)
       .then(() => {
-        // Update the procedures state to remove the deleted procedure
+
         setProcedures((prevProcedures) => prevProcedures.filter((procedure) => procedure.id !== id));
         setIsPopupVisible(true);
         setPopupMessage("Procedure deleted successfully!");
         setPopupMessageType("success");
       })
       .catch((error) => {
-        // Handle the error
+
         setIsPopupVisible(true);
         setPopupMessage("Cannot delete procedure because it's used for appointments!");
         setPopupMessageType("error");
@@ -51,7 +51,7 @@ const Procedures = () => {
   };
 
   const handleAddButtonClick = () => {
-    navigate('/admin/dashboard/add-procedure'); // Redirect to the "/addProcedure" page
+    navigate('/admin/dashboard/add-procedure');
   };
 
   return (

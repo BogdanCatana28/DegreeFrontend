@@ -137,7 +137,6 @@ export function AccountPageForm({preloadedData}) {
                             setIsVisible={setIsPopupVisible}></TimedPopup>}
         <div className="account-page big-form-component-resize">
 
-            {/* NAVIGATION BUTTONS */}
             <div className="routing-buttons">
                 <button role="button" className="account-navigation-button account-button">Account</button>
                 <button role="button" className="account-navigation-button" onClick={navigateToPreferences}>
@@ -146,20 +145,19 @@ export function AccountPageForm({preloadedData}) {
             </div>
 
             <div className=" card card-container mb-5 green-form ">
-                {/* AVATAR */}
+
                 <Avatar onAvatarChange={handleAvatarChange}/>
                 {avatarChanged &&
                     <button type="submit" className="form-submit-button" onClick={handleSaveAvatar}>
                         Update avatar
                     </button>
                 }
-                {/* FORM INFORMATION */}
+
                 <div className="extra-info">
                     <p>Select the image to update profile picture</p>
                     <p>Modify your password below</p>
                 </div>
 
-                {/* ACCOUNT INFORMATION */}
                 <Formik
                     initialValues={initialValues}
                     validationSchema={validationSchema}
@@ -180,7 +178,6 @@ export function AccountPageForm({preloadedData}) {
                                             component="div"
                                             className="input-error-message"
                                         /> :
-                                        // Used to take space on the page when there is no error
                                         <span className="hidden-error-message">Error</span>}
                                 </div>
                             </div>
@@ -198,7 +195,6 @@ export function AccountPageForm({preloadedData}) {
                                             component="div"
                                             className="input-error-message"
                                         /> :
-                                        // Used to take space on the page when there is no error
                                         <span className="hidden-error-message">Error</span>}
                                 </div>
                             </div>
@@ -218,7 +214,6 @@ export function AccountPageForm({preloadedData}) {
                                             component="div"
                                             className="input-error-message"
                                         /> :
-                                        // Used to take space on the page when there is no error
                                         <span className="hidden-error-message">Error</span>}
                                 </div>
                             </div>
@@ -240,7 +235,6 @@ export function AccountPageForm({preloadedData}) {
                                             component="div"
                                             className="input-error-message"
                                         /> :
-                                        // Used to take space on the page when there is no error
                                         <span className="hidden-error-message">Error</span>}
                                 </div>
                             </div>
@@ -262,7 +256,6 @@ export function AccountPageForm({preloadedData}) {
                                             component="div"
                                             className="input-error-message"
                                         /> :
-                                        // Used to take space on the page when there is no error
                                         <span className="hidden-error-message">Error</span>}
                                 </div>
                             </div>
@@ -282,7 +275,6 @@ export function AccountPageForm({preloadedData}) {
                                             component="div"
                                             className="input-error-message"
                                         /> :
-                                        // Used to take space on the page when there is no error
                                         <span className="hidden-error-message">Error</span>}
                                 </div>
                             </div>
@@ -301,7 +293,6 @@ export function AccountPageForm({preloadedData}) {
                                             component="div"
                                             className="input-error-message"
                                         /> :
-                                        // Used to take space on the page when there is no error
                                         <span className="hidden-error-message">Error</span>}
                                 </div>
                             </div>
@@ -321,7 +312,6 @@ export function AccountPageForm({preloadedData}) {
                                         component="div"
                                         className="input-error-message"
                                     /> :
-                                        // Used to take space on the page when there is no error
                                         <span className="hidden-error-message">Error</span>}
                                 </div>
                             </div>

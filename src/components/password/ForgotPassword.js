@@ -3,7 +3,7 @@ import {useDispatch, useSelector} from "react-redux";
 // import { useHistory } from "react-router-dom";
 import {Formik, Field, Form, ErrorMessage} from "formik";
 import * as Yup from "yup";
-import {sendPasswordResetEmailAction} from "../../slices/Auth"; // Import the updated action and clearMessage action
+import {sendPasswordResetEmailAction} from "../../slices/Auth";
 import {clearMessage} from "../../slices/Message";
 import {setMessage} from "../../slices/Message";
 import "./ForgotPassword.css";
@@ -11,10 +11,9 @@ import TimedPopup from "../popup/TimedPopup";
 import api from "../../services/Api";
 
 const ForgotPassword = () => {
-    // const history = useHistory();
-    //Comments, imports, arrow functions
+
     const dispatch = useDispatch();
-    const {successMessage, errorMessage} = useSelector((state) => state.auth); // Access messages from Redux state
+    const {successMessage, errorMessage} = useSelector((state) => state.auth);
     const [isPopupVisible, setIsPopupVisible] = React.useState(false);
     const [popupMessage, setPopupMessage] = React.useState("");
     const [successful, setSuccessful] = React.useState(false);
@@ -40,7 +39,6 @@ const ForgotPassword = () => {
 
         forgotPassword(email)
             .then(() => {
-                // Handle success: Show success message and navigate to login page
                 console.log("Password reset email sent successfully");
                 setIsPopupVisible(true)
                 setPopupMessage("Password reset email sent successfully.")
@@ -48,7 +46,6 @@ const ForgotPassword = () => {
 
             })
             .catch((error) => {
-                // Handle errors (e.g., show an error message)
                 setIsPopupVisible(true)
                 setPopupMessage("Error sending password reset email:" + error.response.data.message)
                 setSuccessful(false)
@@ -72,7 +69,6 @@ const ForgotPassword = () => {
                             {({errors, touched}) => (
                                 <Form className="form-login">
                                     <h1>Forgot Password</h1>
-                                    {/* <p className="p-4 forgor-text-color mt-20">Enter your email address and we will send you an email with instructions to reset your password</p>  */}
                                     <div className="form-group">
 
                                         <Field

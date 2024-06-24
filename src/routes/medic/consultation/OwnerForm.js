@@ -6,7 +6,7 @@ export function OwnerForm ({errors, touched}) {
 
     return (
         <div className="consulation-form-card">
-            {/***************** OWNER ********************/}
+
             <div>
                 <h3 className="consulation-form-subtitle">Owner</h3>
 
@@ -28,7 +28,7 @@ export function OwnerForm ({errors, touched}) {
                                     component="div"
                                     className="input-error-message"
                                 /> :
-                                // Used to take space on the page when there is no error
+
                                 <span className="hidden-error-message">Error</span>}
                         </div>
                     </div>
@@ -50,7 +50,7 @@ export function OwnerForm ({errors, touched}) {
                                     component="div"
                                     className="input-error-message"
                                 /> :
-                                // Used to take space on the page when there is no error
+
                                 <span className="hidden-error-message">Error</span>}
                         </div>
                     </div>
@@ -72,7 +72,7 @@ export function OwnerForm ({errors, touched}) {
                                     component="div"
                                     className="input-error-message"
                                 /> :
-                                // Used to take space on the page when there is no error
+
                                 <span className="hidden-error-message">Error</span>}
                         </div>
                     </div>
@@ -93,7 +93,6 @@ export function OwnerForm ({errors, touched}) {
                                     component="div"
                                     className="input-error-message"
                                 /> :
-                                // Used to take space on the page when there is no error
                                 <span className="hidden-error-message">Error</span>}
                         </div>
                     </div>
@@ -114,7 +113,6 @@ export function OwnerForm ({errors, touched}) {
                                     component="div"
                                     className="input-error-message"
                                 /> :
-                                // Used to take space on the page when there is no error
                                 <span className="hidden-error-message">Error</span>}
                         </div>
                     </div>

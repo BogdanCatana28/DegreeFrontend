@@ -126,9 +126,6 @@ const ResetPassword = () => {
         </div>
         <div class="overlay-container">
               <div class="overlay-ResetPassword">
-                  {/* <div class="overlay-panel overlay-right">
-                      
-                  </div> */}
               </div>
           </div>
       </div>

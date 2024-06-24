@@ -59,7 +59,6 @@ export default function Step5({getPetDetails, currentData}) {
         }
     }, [currentData]);
 
-    // PATIENT_TYPES
     const [patientTypes, setPatientTypes] = useState([]);
     const fetchPatientTypes = () => {
         console.log("fetching")
@@ -70,7 +69,6 @@ export default function Step5({getPetDetails, currentData}) {
             .then(patientTypes => setPatientTypes(patientTypes))
     }
 
-    // PATIENT_SEX
     const [patientSexes, setPatientSexes] = useState([]);
     const fetchPatientSex = () => {
         console.log("fetching")

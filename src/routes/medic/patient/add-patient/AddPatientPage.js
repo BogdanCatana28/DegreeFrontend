@@ -10,7 +10,6 @@ import TimedPopup from "../../../../components/popup/TimedPopup";
 export default function AddPatientPage({patient}) {
     const location = useLocation();
 
-    //  to preload data if form is opened from medic calendar
     const [fromAppointments, setFromAppointments] = useState(false);
     const [patientId, setPatientId] = useState(-1);
     useEffect(() => {
@@ -33,7 +32,7 @@ export default function AddPatientPage({patient}) {
     }, []);
 
     const initialValues = {
-        // patient
+
         patientName: "",
         patientAgeYears: "",
         patientAgeMonths: "",
@@ -45,7 +44,6 @@ export default function AddPatientPage({patient}) {
         patientColour: "",
         patientMedicalHistoryBeforeClinic: "",
 
-        // owner
         ownerFirstName: "",
         ownerLastName: "",
         ownerEmail: "",
@@ -65,7 +63,7 @@ export default function AddPatientPage({patient}) {
     const [loadOwnerForm, setLoadOwnerForm] = useState(false);
 
     const validationSchema = Yup.object().shape({
-        // PATIENT
+
         patientName: Yup.string()
             .test(
                 "len",
@@ -101,21 +99,6 @@ export default function AddPatientPage({patient}) {
                         val.toString().length >= 0 &&
                         val.toString().length <= 10001)
             ),
-
-        //todo make this validation work
-
-        // OWNER
-        // ownerFirstName: Yup.string()
-        //     .required("This field is required!"),
-        // ownerLastName: Yup.string()
-        //     .required("This field is required!"),
-        // ownerEmail: Yup.string()
-        //     .email("This is not a valid email.")
-        //     .required("This field is required!"),
-        // ownerPhone: Yup.number()
-        //     .required("This field is required!"),
-        // ownerAddress: Yup.string()
-        //     .required("This field is required!"),
     });
 
     const [isPopupVisible, setIsPopupVisible] = React.useState(false);
@@ -123,7 +106,7 @@ export default function AddPatientPage({patient}) {
     const [successful, setSuccessful] = React.useState(false);
 
     const handleAddPatient = (formValue) => {
-        //  patient data from form
+
         const {
             patientName,
             patientAgeYears,
@@ -149,7 +132,7 @@ export default function AddPatientPage({patient}) {
             patientBreed,
             patientColour,
             patientMedicalHistoryBeforeClinic,
-            // owner data from state
+
             owner: {
                 firstName: firstName,
                 lastName: lastName,
@@ -175,8 +158,6 @@ export default function AddPatientPage({patient}) {
         });
     };
 
-
-    // REGISTERED OWNER
     const [registered, setItRegistered] = useState(false)
 
     function handleClickRegistred() {
@@ -206,12 +187,10 @@ export default function AddPatientPage({patient}) {
             setAddress("");
             setId(-1);
         }
-        // Reinitialize owner data
 
         setSelectedCustomerIndex(null);
     }
 
-    // CUSTOMERS
     const [customers, setCustomers] = useState([]);
     const [filteredCustomers, setFilteredCustomers] = useState([]);
 
@@ -274,18 +253,15 @@ export default function AddPatientPage({patient}) {
 
                             <div className="component-resize-width">
 
-                                {/* === PATIENT ===  */}
                                 <div className="add-patient-form-card">
                                     <PatientForm errors={errors} touched={touched}/>
                                 </div>
 
-                                {/* === OWNER ===  */}
                                 <div className="add-patient-form-card">
                                     <div>
 
                                         <h3 className="green-patient-form-subtitle">Owner</h3>
 
-                                        {/* == REGISTERED == */}
                                         <div>
                                             <label className="green-patient-form-subtitle"
                                                    htmlFor="userAlreadyRegistered">Registered</label>
@@ -314,12 +290,10 @@ export default function AddPatientPage({patient}) {
                                                             component="div"
                                                             className="input-error-message"
                                                         /> :
-                                                        // Used to take space on the page when there is no error
                                                         <span className="hidden-error-message">Error</span>}
                                                 </div>
                                             </div>
 
-                                            {/* == REGISTERED YES -> FIND ACCOUNT == */}
                                             {registered ?
                                                 <div>
                                                     <div className="add-patient-form-group">
@@ -331,7 +305,6 @@ export default function AddPatientPage({patient}) {
                                                             onChange={filterCustomers}
                                                         />
                                                         <div>
-                                                            {/*Used to take space on the page when there is no error*/}
                                                             <span className="hidden-error-message">Error</span>
                                                         </div>
                                                     </div>
@@ -371,7 +344,6 @@ export default function AddPatientPage({patient}) {
                                                                     component="div"
                                                                     className="input-error-message"
                                                                 /> :
-                                                                // Used to take space on the page when there is no error
                                                                 <span className="hidden-error-message">Error</span>}
                                                         </div>
                                                     </div>
@@ -380,12 +352,9 @@ export default function AddPatientPage({patient}) {
                                                 ""
                                             }
 
-
-                                            {/* == REGISTERED NO -> CREATE ACCOUNT == */}
                                             {loadOwnerForm ?
                                                 <div>
 
-                                                    {/* == FIRST NAME == */}
                                                     <div className="add-patient-form-group">
                                                         <label className="add-patient-form-label"
                                                                htmlFor="ownerFirstName">First name</label>
@@ -406,13 +375,11 @@ export default function AddPatientPage({patient}) {
                                                                     component="div"
                                                                     className="input-error-message"
                                                                 /> :
-                                                                // Used to take space on the page when there is no error
                                                                 <span
                                                                     className="hidden-error-message">Error</span>}
                                                         </div>
                                                     </div>
 
-                                                    {/* == LAST NAME == */}
                                                     <div className="add-patient-form-group">
                                                         <label className="add-patient-form-label"
                                                                htmlFor="ownerLastName">Last name</label>
@@ -433,14 +400,12 @@ export default function AddPatientPage({patient}) {
                                                                     component="div"
                                                                     className="input-error-message"
                                                                 /> :
-                                                                // Used to take space on the page when there is no error
                                                                 <span
                                                                     className="hidden-error-message">Error</span>}
                                                         </div>
                                                     </div>
 
 
-                                                    {/* == EMAIL == */}
                                                     <div className="add-patient-form-group">
                                                         <label className="add-patient-form-label"
                                                                htmlFor="ownerEmail">Email</label>
@@ -461,12 +426,10 @@ export default function AddPatientPage({patient}) {
                                                                     component="div"
                                                                     className="input-error-message"
                                                                 /> :
-                                                                // Used to take space on the page when there is no error
                                                                 <span className="hidden-error-message">Error</span>}
                                                         </div>
                                                     </div>
 
-                                                    {/* == PHONE == */}
                                                     <div className="add-patient-form-group">
                                                         <label className="add-patient-form-label"
                                                                htmlFor="ownerPhone">Phone</label>
@@ -487,13 +450,11 @@ export default function AddPatientPage({patient}) {
                                                                     component="div"
                                                                     className="input-error-message"
                                                                 /> :
-                                                                // Used to take space on the page when there is no error
                                                                 <span
                                                                     className="hidden-error-message">Error</span>}
                                                         </div>
                                                     </div>
 
-                                                    {/* == ADDRESS == */}
                                                     <div className="add-patient-form-group">
                                                         <label className="add-patient-form-label"
                                                                htmlFor="ownerAddress">Address</label>
@@ -514,7 +475,6 @@ export default function AddPatientPage({patient}) {
                                                                     component="div"
                                                                     className="input-error-message"
                                                                 /> :
-                                                                // Used to take space on the page when there is no error
                                                                 <span className="hidden-error-message">Error</span>}
                                                         </div>
                                                     </div>
@@ -526,7 +486,6 @@ export default function AddPatientPage({patient}) {
                                 </div>
                             </div>
 
-                            {/* === SUBMIT BUTTON ===  */}
                             <div>
                                 <button type="submit" className="add-patient-form-submit-button">
                                     Add patient

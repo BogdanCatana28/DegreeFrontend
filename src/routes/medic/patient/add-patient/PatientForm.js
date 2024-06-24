@@ -5,7 +5,7 @@ import RequestInstance from "../../../../utils/RequestInstance";
 import "./AddPatientPage.css"
 
 export default function PatientForm({errors, touched}) {
-    /* == PATIENT_AGE == */
+
     const [age, setItAge] = useState(false)
     const [birthday, setItBirthday] = useState(false)
     const years = [];
@@ -17,7 +17,6 @@ export default function PatientForm({errors, touched}) {
         months.push(i.toString());
     }
 
-    /* == PATIENT_TYPES == */
     const [patientTypes, setPatientTypes] = useState([]);
     const fetchPatientTypes = () => {
         return RequestInstance.get(GET_PATIENT_TYPES_URL)
@@ -27,7 +26,6 @@ export default function PatientForm({errors, touched}) {
             .then(patientTypes => setPatientTypes(patientTypes))
     }
 
-    /* == PATIENT_SEX == */
     const [patientSexes, setPatientSexes] = useState([]);
     const fetchPatientSex = () => {
         return RequestInstance.get(GET_PATIENT_SEXES_URL)
@@ -44,11 +42,9 @@ export default function PatientForm({errors, touched}) {
 
     return (
         <div>
-            {/* == PATIENT == */}
             <h3 className="green-patient-form-subtitle">Patient</h3>
             <div>
 
-                {/* == PATIENT NAME == */}
                 <div className="add-patient-form-group">
                     <label className="add-patient-form-label" htmlFor="patientName">Name</label>
                     <Field
@@ -64,12 +60,10 @@ export default function PatientForm({errors, touched}) {
                                 component="div"
                                 className="input-error-message"
                             /> :
-                            // Used to take space on the page when there is no error
                             <span className="hidden-error-message">Error</span>}
                     </div>
                 </div>
 
-                {/* == PATIENT TYPE == */}
                 <div className="add-patient-form-group">
                     <label className="add-patient-form-label" htmlFor="patientType">Type</label>
                     <Field
@@ -96,13 +90,10 @@ export default function PatientForm({errors, touched}) {
                                 component="div"
                                 className="input-error-message"
                             /> :
-                            // Used to take space on the page when there is no error
                             <span className="hidden-error-message">Error</span>}
                     </div>
                 </div>
 
-
-                {/* == PATIENT BREED == */}
                 <div className="add-patient-form-group">
                     <label className="add-patient-form-label" htmlFor="patientBreed">Breed</label>
                     <Field
@@ -118,12 +109,10 @@ export default function PatientForm({errors, touched}) {
                                 component="div"
                                 className="input-error-message"
                             /> :
-                            // Used to take space on the page when there is no error
                             <span className="hidden-error-message">Error</span>}
                     </div>
                 </div>
 
-                {/* == PATIENT COLOUR == */}
                 <div className="add-patient-form-group">
                     <label className="add-patient-form-label" htmlFor="patientColour">Colour</label>
                     <Field
@@ -141,12 +130,10 @@ export default function PatientForm({errors, touched}) {
                                 component="div"
                                 className="input-error-message"
                             /> :
-                            // Used to take space on the page when there is no error
                             <span className="hidden-error-message">Error</span>}
                     </div>
                 </div>
 
-                {/* == PATIENT SEX == */}
                 <div className="add-patient-form-group">
                     <label className="add-patient-form-label" htmlFor="patientSex">Sex</label>
                     <Field
@@ -173,12 +160,10 @@ export default function PatientForm({errors, touched}) {
                                 component="div"
                                 className="invalid-feedback"
                             /> :
-                            // Used to take space on the page when there is no error
                             <span className="hidden-error-message">Error</span>}
                     </div>
                 </div>
 
-                {/* == PATIENT WEIGHT == */}
                 <div className="add-patient-form-group">
                     <label className="add-patient-form-label" htmlFor="patientWeight">Weight
                         (kgs)</label>
@@ -195,12 +180,10 @@ export default function PatientForm({errors, touched}) {
                                 component="div"
                                 className="input-error-message"
                             /> :
-                            // Used to take space on the page when there is no error
                             <span className="hidden-error-message">Error</span>}
                     </div>
                 </div>
 
-                {/* == PATIENT AGE == */}
                 <div className="add-patient-form-group">
                     <label className="add-patient-form-label" htmlFor="age">Age</label>
                     <div className="add-patient-form-element">
@@ -241,7 +224,6 @@ export default function PatientForm({errors, touched}) {
                                 component="div"
                                 className="input-error-message"
                             /> :
-                            // Used to take space on the page when there is no error
                             <span className="hidden-error-message">Error</span>}
                     </div>
                 </div>
@@ -249,7 +231,6 @@ export default function PatientForm({errors, touched}) {
                 {age ?
                     <div className="add-patient-form-inline-display-age ">
 
-                        {/* == PATIENT AGE YEARS == */}
                         <div className="add-patient-form-group add-patient-form-element-margin-right">
                             <label className="add-patient-form-label" htmlFor="patientAgeYears">Years</label>
                             <Field
@@ -276,12 +257,10 @@ export default function PatientForm({errors, touched}) {
                                         component="div"
                                         className="input-error-message"
                                     /> :
-                                    // Used to take space on the page when there is no error
                                     <span className="hidden-error-message">Error</span>}
                             </div>
                         </div>
 
-                        {/* == PATIENT AGE MONTHS == */}
                         <div className="add-patient-form-group add-patient-form-element-margin-left">
                             <label className="add-patient-form-label" htmlFor="patientAgeMonths">Months</label>
                             <Field
@@ -308,14 +287,12 @@ export default function PatientForm({errors, touched}) {
                                         component="div"
                                         className="input-error-message"
                                     /> :
-                                    // Used to take space on the page when there is no error
                                     <span className="hidden-error-message">Error</span>}
                             </div>
                         </div>
                     </div>
                     : ''}
 
-                {/* == PATIENT BIRTHDATE == */}
                 {birthday ?
 
                     <div className="add-patient-form-group">
@@ -332,13 +309,11 @@ export default function PatientForm({errors, touched}) {
                                     component="div"
                                     className="input-error-message"
                                 /> :
-                                // Used to take space on the page when there is no error
                                 <span className="hidden-error-message">Error</span>}
                         </div>
                     </div>
                     : ''}
 
-                {/* == PATIENT HISTORY == */}
                 <div className="add-patient-form-group">
                     <label className="add-patient-form-label" htmlFor="patientMedicalHistoryBeforeClinic">Medical history</label>
                     <Field
@@ -354,7 +329,6 @@ export default function PatientForm({errors, touched}) {
                                 component="div"
                                 className="input-error-message"
                             /> :
-                            // Used to take space on the page when there is no error
                             <span className="hidden-error-message">Error</span>}
                     </div>
                 </div>
@@ -362,5 +336,3 @@ export default function PatientForm({errors, touched}) {
         </div>
     );
 }
-
-//the file it's too big

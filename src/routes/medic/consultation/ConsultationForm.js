@@ -6,7 +6,6 @@ export default function ConsultationForm({preloadedData, errors, touched}) {
 
     return (
         <div className="consulation-form-card">
-            {/******************** CONSULTATION **********************/}
             <div>
                 <h3 className="consulation-form-subtitle">Consultation</h3>
 
@@ -28,7 +27,6 @@ export default function ConsultationForm({preloadedData, errors, touched}) {
                                     component="div"
                                     className="input-error-message"
                                 /> :
-                                // Used to take space on the page when there is no error
                                 <span className="hidden-error-message">Error</span>}
                         </div>
                     </div>
@@ -50,7 +48,6 @@ export default function ConsultationForm({preloadedData, errors, touched}) {
                                     component="div"
                                     className="input-error-message"
                                 /> :
-                                // Used to take space on the page when there is no error
                                 <span className="hidden-error-message">Error</span>}
                         </div>
                     </div>
@@ -72,7 +69,7 @@ export default function ConsultationForm({preloadedData, errors, touched}) {
                                     component="div"
                                     className="input-error-message"
                                 /> :
-                                // Used to take space on the page when there is no error
+
                                 <span className="hidden-error-message">Error</span>}
                         </div>
                     </div>
@@ -94,7 +91,6 @@ export default function ConsultationForm({preloadedData, errors, touched}) {
                                     component="div"
                                     className="input-error-message"
                                 /> :
-                                // Used to take space on the page when there is no error
                                 <span className="hidden-error-message">Error</span>}
                         </div>
                     </div>
@@ -116,7 +112,6 @@ export default function ConsultationForm({preloadedData, errors, touched}) {
                                     component="div"
                                     className="input-error-message"
                                 /> :
-                                // Used to take space on the page when there is no error
                                 <span className="hidden-error-message">Error</span>}
                         </div>
                     </div>

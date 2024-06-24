@@ -12,9 +12,7 @@ export function PreferencePage() {
     useEffect(() => {
         const boi = RequestInstance.get(`http://localhost:8080/user-preferences/customer/${user.id}`)
             .then(response => {
-                // if (!response.ok) {
-                //   throw new Error('Network response was not ok');
-                // }
+
                 console.log("data1");
                 console.log(response.data);
                 return response.data;

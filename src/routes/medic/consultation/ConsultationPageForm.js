@@ -11,10 +11,10 @@ import "./AddConsultationPage.css"
 import {useNavigate} from 'react-router-dom';
 import moment from "moment";
 import TimedPopup from "../../../components/popup/TimedPopup";
-//remove the imports that what you don't use.
+
 export default function ConsultationPageForm({preloadedData}) {
     const initialValues = {
-        // patient
+
         patientId: preloadedData.id,
         patientName: preloadedData.patientName,
         patientBirthdate: preloadedData.patientBirthdate,
@@ -24,14 +24,12 @@ export default function ConsultationPageForm({preloadedData}) {
         patientBreed: preloadedData.patientBreed,
         patientColour: preloadedData.patientColour,
 
-        // owner
         ownerFirstName: preloadedData.owner.firstName,
         ownerLastName: preloadedData.owner.lastName,
         ownerEmail: preloadedData.owner.email,
         ownerAddress: preloadedData.owner.address,
         ownerPhone: preloadedData.owner.phone,
 
-        //consultation
         consultationMainConcern: "",
         consultationHistoryOfConcern: "",
         consultationDiagnostic: "",
@@ -50,7 +48,6 @@ export default function ConsultationPageForm({preloadedData}) {
     }
     const handleAddConsultation = (formValue) => {
         const {
-            //patient
             patientId,
             patientName,
             patientBirthdate,
@@ -59,13 +56,13 @@ export default function ConsultationPageForm({preloadedData}) {
             patientSex,
             patientBreed,
             patientColour,
-            // owner
+
             ownerFirstName,
             ownerLastName,
             ownerEmail,
             ownerAddress,
             ownerPhone,
-            //consultation
+
             consultationMainConcern,
             consultationHistoryOfConcern,
             consultationDiagnostic,
@@ -81,7 +78,7 @@ export default function ConsultationPageForm({preloadedData}) {
         }
 
         RequestInstance.post(ADD_CONSULTATION_URL, {
-            //patient
+
             patientId,
             patientName,
             patientBirthDate:patientBirthdate,
@@ -90,13 +87,13 @@ export default function ConsultationPageForm({preloadedData}) {
             patientSex,
             patientBreed,
             patientColor:patientColour,
-            // owner
+
             ownerFirstName,
             ownerLastName,
             ownerEmail,
             ownerAddress,
             ownerPhone,
-            //consultation
+
             consultationMainConcern,
             consultationHistoryOfConcern,
             consultationDiagnostic,
@@ -117,7 +114,7 @@ export default function ConsultationPageForm({preloadedData}) {
     };
 
     const validationSchema = Yup.object().shape({
-        // PATIENT
+
         patientName: Yup.string()
             .test(
                 "len",
@@ -143,7 +140,7 @@ export default function ConsultationPageForm({preloadedData}) {
             .required("This field is required!"),
         patientAgeYears: Yup.number(),
         patientAgeMonths: Yup.number(),
-        patientBirthdate: Yup.date(), // verify not future?
+        patientBirthdate: Yup.date(),
         patientMedicalHistoryBeforeClinic: Yup.string()
             .test(
                 "med-history-len",
@@ -154,7 +151,6 @@ export default function ConsultationPageForm({preloadedData}) {
                         val.toString().length <= 10001)
             ),
 
-        // OWNER
         ownerFirstName: Yup.string()
             .required("This field is required!"),
         ownerLastName: Yup.string()
@@ -167,7 +163,6 @@ export default function ConsultationPageForm({preloadedData}) {
         ownerAddress: Yup.string()
             .required("This field is required!"),
 
-        // CONSULTATION
         consultationMainConcern: Yup.string()
             .required("This field is required!"),
     });

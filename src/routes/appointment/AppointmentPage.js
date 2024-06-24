@@ -23,5 +23,3 @@ function AppointmentPage() {
 }
 
 export default AppointmentPage;
-
-//A good practice it's to use same name for Js and css file.

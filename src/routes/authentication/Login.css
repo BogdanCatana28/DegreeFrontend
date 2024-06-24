@@ -304,8 +304,6 @@ button.ghost {
     border-radius: 5px;
   }
 
-  /* Coponenta sa stea fixa pe mijloc
-     daca intaltimea ecranului e mai mare ca ea */
 @media (max-height: 640px) {
     .login-form-resize {
         min-height: 100vh;

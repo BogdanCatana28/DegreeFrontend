@@ -6,24 +6,20 @@ import "./AddConsultationPage.css"
 
 export default function PatientForm({preloadedData, errors, touched}) {
 
-    /************************* PATIENT_TYPES *************************/
     const [patientTypes, setPatientTypes] = useState([]);
     const fetchPatientTypes = () => {
         console.log("fetching")
         return RequestInstance.get(GET_PATIENT_TYPES_URL)
-            // .then((response) => response.json())
             .then((data) => {
                 return data.data;
             })
             .then(patientTypes => setPatientTypes(patientTypes))
     }
 
-    /************************* PATIENT_SEX *************************/
     const [patientSexes, setPatientSexes] = useState([]);
     const fetchPatientSex = () => {
         console.log("fetching")
         return RequestInstance.get(GET_PATIENT_SEXES_URL)
-            // .then((response) => response.json())
             .then((data) => {
                 return data.data;
             })
@@ -34,7 +30,7 @@ export default function PatientForm({preloadedData, errors, touched}) {
         fetchPatientTypes();
         fetchPatientSex();
     }, []);
-//a good practice it's to declare all the useState, firstly in the file.
+
     return (
         <div className="consulation-form-card">
             <h3 className="consulation-form-subtitle">Patient</h3>
@@ -57,7 +53,6 @@ export default function PatientForm({preloadedData, errors, touched}) {
                                 component="div"
                                 className="input-error-message"
                             /> :
-                            // Used to take space on the page when there is no error
                             <span className="hidden-error-message">Error</span>}
                     </div>
                 </div>
@@ -93,7 +88,6 @@ export default function PatientForm({preloadedData, errors, touched}) {
                                 component="div"
                                 className="input-error-message"
                             /> :
-                            // Used to take space on the page when there is no error
                             <span className="hidden-error-message">Error</span>}
                     </div>
                 </div>
@@ -115,7 +109,6 @@ export default function PatientForm({preloadedData, errors, touched}) {
                                 component="div"
                                 className="input-error-message"
                             /> :
-                            // Used to take space on the page when there is no error
                             <span className="hidden-error-message">Error</span>}
                     </div>
                 </div>
@@ -136,7 +129,6 @@ export default function PatientForm({preloadedData, errors, touched}) {
                                 component="div"
                                 className="input-error-message"
                             /> :
-                            // Used to take space on the page when there is no error
                             <span className="hidden-error-message">Error</span>}
                     </div>
                 </div>
@@ -170,7 +162,6 @@ export default function PatientForm({preloadedData, errors, touched}) {
                                 component="div"
                                 className="input-error-message"
                             /> :
-                            // Used to take space on the page when there is no error
                             <span className="hidden-error-message">Error</span>}
                     </div>
                 </div>
@@ -192,7 +183,6 @@ export default function PatientForm({preloadedData, errors, touched}) {
                                 component="div"
                                 className="input-error-message"
                             /> :
-                            // Used to take space on the page when there is no error
                             <span className="hidden-error-message">Error</span>}
                     </div>
                 </div>
@@ -214,7 +204,6 @@ export default function PatientForm({preloadedData, errors, touched}) {
                                 component="div"
                                 className="input-error-message"
                             /> :
-                            // Used to take space on the page when there is no error
                             <span className="hidden-error-message">Error</span>}
                     </div>
                 </div>

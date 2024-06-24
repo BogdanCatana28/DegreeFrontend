@@ -31,7 +31,6 @@ import moment from "moment";
 import requestInstance from "../../../utils/RequestInstance";
 import TokenService from "../../../services/TokenService";
 
-//--------------------------------------DATA--------------------------------------------------------
 
 const colorPalette = ["#26c6da","#26a69a","#2cd0bd","#0288d1","#03a9f4","#18ffff"];
 
@@ -126,7 +125,6 @@ const classes = {
     commandButton: `commandButton`,
 };
 
-//--------------------------------------HEADER--------------------------------------------------------
 
 const StyledIconButton = styled(IconButton)(() => ({
     [`&.${classes.commandButton}`]: {
@@ -145,7 +143,6 @@ const StyledAppointmentTooltipHeader = styled(AppointmentTooltip.Header)(
 function CommandButton(props) {
     const { appointmentData, ...restProps } = props;
     const navigate = useNavigate();
-    // let patientDetails = await appointmentData.exists.then((response)=>{return response.data});
     if (appointmentData.exists === true) {
         return (
             <>
@@ -193,7 +190,6 @@ const Header = ({ children, appointmentData, ...restProps }) => (
     </StyledAppointmentTooltipHeader>
 );
 
-//--------------------------------------TODAY-STYLE--------------------------------------------------------
 const StyledWeekViewTimeTableCell = styled(WeekView.TimeTableCell)(({ theme }) => ({
     [`&.${classes.todayCell}`]: {
         backgroundColor: alpha("#43a047", 0.2),
@@ -216,8 +212,6 @@ const TimeTableCell = (props) => {
     }  return <StyledWeekViewTimeTableCell {...props} />;
 };
 
-
-//--------------------------------------CALENDAR--------------------------------------------------------
 
 function Demo() {
     const getMonday = (d) => {
@@ -373,4 +367,3 @@ function Demo() {
 
 
 export default Demo;
-//Try to split this component, it's too big to be read and understand what it's does.

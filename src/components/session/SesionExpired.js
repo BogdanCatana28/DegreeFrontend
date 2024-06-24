@@ -5,7 +5,7 @@ import "./SessionExpired.css";
 function SessionExpiredBox({ onLogout }) {
     const [isVisible, setIsVisible] = useState(true);
   const handleLogout = () => {
-    setIsVisible(false); // Hide the box when logout is clicked
+    setIsVisible(false);
     window.location.href = "/login";
   };
   return (
@@ -19,4 +19,3 @@ function SessionExpiredBox({ onLogout }) {
 }
 
 export default SessionExpiredBox;
-//The name of file is SesionExpired, Change in SessionExpired
