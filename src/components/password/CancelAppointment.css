@@ -1,0 +1,25 @@
+.background-wrapper-cancel {
+    height: 89vh;
+    background-image: url(../../../public/background1.jpg);
+    margin-top: 0px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container-cancel {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    position: relative;
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 200px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+  }
+  

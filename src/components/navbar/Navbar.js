@@ -42,14 +42,13 @@ function Navbar() {
               setModalOpen(false);
             }}>
               <SiPetsathome className="navbar-icon" />
-              Fluffy Vet
+              Neo Vet
             </Link>
             <div className="menu-icon" onClick={handleClick}>
               {click ? <FaTimes /> : <FaBars />}
             </div>
             <ul className={click ? "nav-menu active mb-0" : "nav-menu mb-0"}>
 
-              {/* ANYONE CAN SEE */}
               <>
                 <li className="nav-item">
                   <NavLink
@@ -87,11 +86,9 @@ function Navbar() {
                 </li>
               </>
 
-              {/* LOGGED USERS */}
               {currentUser ? (
                 <>
 
-                  {/* ADMIN */}
                   {currentUser.roles.includes("ROLE_ADMIN") && (
                     <>
                         <li className="nav-item">
@@ -125,7 +122,6 @@ function Navbar() {
                   </>
                   )}
 
-                  {/* MEDIC */}
                   {currentUser.roles.includes("ROLE_MEDIC") && (
                     <>
                       <li className="nav-item">
@@ -145,7 +141,6 @@ function Navbar() {
                     </>
                   )}
 
-                  {/* CUSTOMER */}
                   <li className="nav-item">
                     <Link
                         to="/account"
@@ -165,7 +160,6 @@ function Navbar() {
                          closeMobileMenu();
                          setModalOpen(false);
                        }}
-                        // onClick={logOut}
                     >
                       Log out
                     </a>
@@ -175,7 +169,6 @@ function Navbar() {
               ) : (
                 <>
 
-                  {/* NOT LOGGED IN USERS */}
                   <li className="nav-item">
                     <NavLink
                       to="/login"

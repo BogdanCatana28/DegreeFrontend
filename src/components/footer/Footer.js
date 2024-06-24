@@ -23,7 +23,7 @@ function Footer() {
                                         <p><FontAwesomeIcon icon={faPhone} /> Phone: +40 789 123 456</p>
                                     </div>
                                     <div className='contact-info-item'>
-                                        <p><FontAwesomeIcon icon={faEnvelope} /> Email: fluffyvet@gmail.com</p>
+                                        <p><FontAwesomeIcon icon={faEnvelope} /> Email: noreply.neovet@gmail.com</p>
                                     </div>
                                 </div>
                                 <div className='social-icons'>
@@ -49,7 +49,7 @@ function Footer() {
                 </div>
                 <div className='social-media-container'>
                     <div className='social-media-wrap'>
-                        <small className='website-rights'>Fluffy Vet © 2023</small>
+                        <small className='website-rights'>Neo Vet © 2024</small>
                     </div>
                 </div>
             </div>

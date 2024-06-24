@@ -5,7 +5,7 @@ function HeroSection() {
   return (
     <div className='hero-container'>
       <video src='/videos/video_team2.mp4' autoPlay loop muted />
-      <h1 style={{ fontFamily: 'Abril Fatface' }}>Welcome to Fluffy Vet!</h1>
+      <h1 style={{ fontFamily: 'Abril Fatface' }}>Welcome to Neo Vet!</h1>
       <p style={{ fontFamily: 'Abril Fatface' }}>How can we help your little friend?</p>
       <svg className="arrows">
         <path className="a1" d="M0 0 L30 32 L60 0"></path>
