@@ -24,7 +24,7 @@ const RegisterMedic = () => {
         experience: "",
     };
 
-    const medicSpecializations = ["SURGERY", "DENTISTRY", "ANESTHESIOLOGY", "PATHOLOGIST", "SMALL_ANIMAL"];
+    const medicSpecializations = ['PATHOLOGIST', 'SMALL_ANIMAL', 'ANESTHESIOLOGY', 'DENTISTRY', 'SURGERY', 'DERMATOLOGY', 'EMERGENCY_AND_CRITICAL_CARE', 'GROOMING', 'NUTRITION', 'VACCINOLOGY'];
 
     const validationSchema = Yup.object().shape({
         firstName: Yup.string()
