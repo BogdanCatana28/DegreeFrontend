@@ -23,8 +23,8 @@ function AddProcedure() {
     return /^[0-9]*$/.test(string);
   }
   const [specializationOptions, setSpecializationOptions] = useState([
-    'PATHOLOGIST', 'SMALL_ANIMAL', 'ANESTHESIOLOGY', 'DENTISTRY', 'SURGERY'
-  ]);
+    'PATHOLOGIST', 'SMALL_ANIMAL', 'ANESTHESIOLOGY', 'DENTISTRY', 'SURGERY', 'DERMATOLOGY', 'EMERGENCY_AND_CRITICAL_CARE', 'GROOMING', 'NUTRITION', 'VACCINOLOGY'
+  ]); 
 
   const { name, duration, price, specializations, anesthesia } = procedure;
 

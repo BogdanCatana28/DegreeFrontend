@@ -30,16 +30,22 @@ const CancelAppointment = () => {
 
   return (
     <>
-      {isPopupVisible &&
-        <TimedPopup message={message} isVisible={isPopupVisible} setIsVisible={setIsPopupVisible} timer={2000}></TimedPopup>}
-      <div className="background-wrapper-cancel">
-        <div className="container-cancel right-panel-active" id="container">
-          <div className="content-cancel">
-            <h2>{isCancelled ? 'Appointment Cancelled' : 'Cancellation Failed'}</h2>
-            <p>{message}</p>
+      {isPopupVisible && (
+        <TimedPopup message={message} isVisible={isPopupVisible} setIsVisible={setIsPopupVisible} timer={2000}></TimedPopup>
+      )}
+      <div className="background-wrapper-cancel cancel-app-form-resize">
+        <div className="container-login right-panel-active" id="container">
+          <div className="form-container sign-in-container">
+            <form className="form-login">
+              <h1>{isCancelled ? 'Appointment Cancelled' : 'Cancellation Failed'}</h1>
+              <p>{message}</p>
+            </form>
           </div>
           <div className="overlay-container">
-            <div className="overlay-cancel"></div>
+            <div className="overlay-CancelAppointment">
+              <div className="overlay-panel overlay-right">
+              </div>
+            </div>
           </div>
         </div>
       </div>

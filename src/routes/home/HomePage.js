@@ -5,6 +5,7 @@ import HeroSection from "./Hero";
 import Footer from '../../components/footer/Footer';
 import About from './About';
 import MakeApp from './MakeApp';
+import Chatbot from './Chatbot';
 
 function HomePage() {
   return (
@@ -13,7 +14,8 @@ function HomePage() {
       <About />
       <Cards />
       <MakeApp />
-      <Footer/>
+      <Footer />
+      <Chatbot />
     </>
   );
 }

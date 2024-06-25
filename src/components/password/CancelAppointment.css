@@ -1,40 +1,87 @@
-.background-wrapper-cancel {
+.overlay-CancelAppointment {
+  background-image: url('../../../public/cancel.jpg');
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position: left;
+  color: #FFFFFF;
+  position: relative;
+  left: -110%;
+  height: 100%;
+  width: 200%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+}
+
+.container-login.right-panel-active .overlay-CancelAppointment {
+  transform: translateX(50%);
+}
+
+.custom-button-cancel{
+  border-radius: 20px;
+  border: 3px solid #00bea4; 
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 20ms ease-in, background-color 200ms ease-in; 
+  margin-top: 20px;
+}
+
+
+.form-control-cancel{
+  margin-top: 25px;
+  display: block;
+  width: 100%;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--bs-body-color);
+  appearance: none;
+  background-color: var(--bs-body-bg);
+  background-clip: padding-box;
+  border: var(--bs-border-width) solid var(--bs-border-color);
+  border-radius: var(--bs-border-radius);
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.background-wrapper-cancel{
   height: 89vh;
-  background-image: url('../../../public/background1.jpg');
+  background-image: url("./background-forgot-password.png");
   margin-top: 0px;
   background-size: cover;
   background-repeat: no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
 }
 
 .container-cancel {
   background-color: #fff;
   border-radius: 10px;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+              0 10px 10px rgba(0, 0, 0, 0.22);
   position: relative;
   overflow: hidden;
   width: 768px;
   max-width: 100%;
-  min-height: 200px;
-  margin: auto;
-  padding: 20px;
-  text-align: center;
+  min-height: 500px;
+  margin:  auto;
+}
+.cancel-text-color{
+  color: #00bea4;
 }
 
-.content-cancel {
-  padding: 20px;
-  text-align: center;
+@media (max-height: 620px) {
+  .cancel-app-form-resize {
+      min-height: 100vh;
+  }
 }
-
-.content-cancel h2 {
-  margin-bottom: 20px;
-  font-size: 24px;
-  color: #333;
-}
-
-.content-cancel p {
-  font-size: 16px;
-  color: #777;
+@media (min-height: 620px) {
+  .cancel-app-form-resize {
+      height: calc(100vh - 80px);
+  }
 }
