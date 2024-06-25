@@ -35,7 +35,7 @@ function PatientDetails() {
 
     const loadConsultations = async () => {
         try {
-          const response = await requestInstance.get(`http://localhost:8080/consultations/consultations/by-patient/${id}`);
+          const response = await requestInstance.get(`http://localhost:8080/consultations/by-patient/${id}`);
           const sortedConsultations = response.data.sort((a, b) => new Date(b.consultationCreationDate) - new Date(a.consultationCreationDate));
           setConsultations(sortedConsultations);
           console.log(sortedConsultations);

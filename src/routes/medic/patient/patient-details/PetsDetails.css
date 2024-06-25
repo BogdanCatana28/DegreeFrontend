@@ -1,0 +1,60 @@
+/* UserPetsConsultations.css */
+.page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 60px); /* Adjusting for the footer height */
+    background-image: url('../../../authentication/background-login.png');
+    background-size: cover;
+    padding: 20px;
+  }
+  
+  .content-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  }
+  
+  .card {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    background-image: url('pets.jpg');
+    background-size: cover;
+    color: black;
+  }
+  
+  .card-body {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+  }
+  
+  .btn {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .btn:hover {
+    background-color: #218838;
+    color: white;
+  }
+  
+  .fs-1 {
+    font-size: 2rem;
+  }
+  
+  .fs-3 {
+    font-size: 1.5rem;
+  }
+  
+  .fw-bold {
+    font-weight: bold;
+  }
+  
+  .font-patient-list {
+    margin-bottom: 0;
+    font-size: 1rem;
+  }
+  

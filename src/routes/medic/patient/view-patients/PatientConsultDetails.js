@@ -21,7 +21,7 @@ function PatientConsultDetails() {
 
     const loadConsultationDetails = async () => {
         try {
-            const response = await RequestInstance.get(`http://localhost:8080/consultations/consultations/${consultationId}`);
+            const response = await RequestInstance.get(`http://localhost:8080/consultations/${consultationId}`);
             setConsultation(response.data);
         } catch (error) {
             console.error('Error loading consultation details:', error);

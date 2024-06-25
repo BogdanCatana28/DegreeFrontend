@@ -7,7 +7,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import EventBus from "../../utils/EventBus";
 import { logout } from "../../slices/Auth";
 import "./Navbar.css";
-import StepperModal from "../../routes/appointment/StepperModal"
+import StepperModal from "../../routes/appointment/StepperModal";
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -30,7 +30,7 @@ function Navbar() {
     return () => {
       EventBus.remove("logout");
     };
-  }, [currentUser,logOut]);
+  }, [currentUser, logOut]);
 
   return (
     <>
@@ -48,38 +48,32 @@ function Navbar() {
               {click ? <FaTimes /> : <FaBars />}
             </div>
             <ul className={click ? "nav-menu active mb-0" : "nav-menu mb-0"}>
-
               <>
                 <li className="nav-item">
                   <NavLink
-                      to="/"
-                      className={({ isActive }) =>
-                          "nav-links" + (isActive ? " activated" : "")
-                      }
-                      onClick={() => {
-                        closeMobileMenu();
-                        setModalOpen(false);
-                      }}
+                    to="/"
+                    className={({ isActive }) => "nav-links" + (isActive ? " activated" : "")}
+                    onClick={() => {
+                      closeMobileMenu();
+                      setModalOpen(false);
+                    }}
                   >
                     Home
                   </NavLink>
                 </li>
                 <li className="nav-item">
-                  <Link to="#" className="nav-links" onClick={() => {setModalOpen(true); closeMobileMenu();}}>
+                  <Link to="#" className="nav-links" onClick={() => { setModalOpen(true); closeMobileMenu(); }}>
                     Appointment
                   </Link>
                 </li>
-
                 <li className="nav-item">
                   <NavLink
-                      to="/medics"
-                      className={({ isActive }) =>
-                          "nav-links" + (isActive ? " activated" : "")
-                      }
-                      onClick={() => {
-                        closeMobileMenu();
-                        setModalOpen(false);
-                      }}
+                    to="/medics"
+                    className={({ isActive }) => "nav-links" + (isActive ? " activated" : "")}
+                    onClick={() => {
+                      closeMobileMenu();
+                      setModalOpen(false);
+                    }}
                   >
                     Medics
                   </NavLink>
@@ -88,93 +82,97 @@ function Navbar() {
 
               {currentUser ? (
                 <>
-
                   {currentUser.roles.includes("ROLE_ADMIN") && (
-                    <>
-                        <li className="nav-item">
-                            <NavLink
-                                to="/admin/shifts"
-                                className={({ isActive }) =>
-                                    "nav-links" + (isActive ? " activated" : "")
-                                }
-                                onClick={() => {
-                                    closeMobileMenu();
-                                    setModalOpen(false);
-                                }}
-                            >
-                                Shifts
-                            </NavLink>
-                        </li>
-                        <li className="nav-item">
-                        <NavLink
-                        to="/admin/dashboard/procedures"
-                        className={({ isActive }) =>
-                          "nav-links" + (isActive ? " activated" : "")
-                        }
-                        onClick={() => {
-                          closeMobileMenu();
-                          setModalOpen(false);
-                        }}
-                      >
-                          Admin Board
-                      </NavLink>
-                    </li>
-                  </>
-                  )}
-
-                  {currentUser.roles.includes("ROLE_MEDIC") && (
                     <>
                       <li className="nav-item">
                         <NavLink
-                          to="/medic/dashboard/calendar"
-                          className={({ isActive }) =>
-                            "nav-links" + (isActive ? " activated" : "")
-                          }
+                          to="/admin/shifts"
+                          className={({ isActive }) => "nav-links" + (isActive ? " activated" : "")}
                           onClick={() => {
                             closeMobileMenu();
                             setModalOpen(false);
                           }}
                         >
-                          Medic Board
+                          Shifts
+                        </NavLink>
+                      </li>
+                      <li className="nav-item">
+                        <NavLink
+                          to="/admin/dashboard/procedures"
+                          className={({ isActive }) => "nav-links" + (isActive ? " activated" : "")}
+                          onClick={() => {
+                            closeMobileMenu();
+                            setModalOpen(false);
+                          }}
+                        >
+                          Admin Board
                         </NavLink>
                       </li>
                     </>
                   )}
 
-                  <li className="nav-item">
-                    <Link
-                        to="/account"
-                        className="nav-links"
+                  {currentUser.roles.includes("ROLE_MEDIC") && (
+                    <li className="nav-item">
+                      <NavLink
+                        to="/medic/dashboard/calendar"
+                        className={({ isActive }) => "nav-links" + (isActive ? " activated" : "")}
                         onClick={() => {
                           closeMobileMenu();
                           setModalOpen(false);
                         }}
+                      >
+                        Medic Board
+                      </NavLink>
+                    </li>
+                  )}
+
+                  {currentUser.roles.includes("ROLE_CUSTOMER") && (
+                    <li className="nav-item">
+                      <NavLink
+                        to="/user/pets-consultations"
+                        className={({ isActive }) => "nav-links" + (isActive ? " activated" : "")}
+                        onClick={() => {
+                          closeMobileMenu();
+                          setModalOpen(false);
+                        }}
+                      >
+                        My Pets
+                      </NavLink>
+                    </li>
+                  )}
+
+                  <li className="nav-item">
+                    <Link
+                      to="/account"
+                      className="nav-links"
+                      onClick={() => {
+                        closeMobileMenu();
+                        setModalOpen(false);
+                      }}
                     >
                       Account
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <a href="/login" className="nav-links"
-                       onClick={() => {
-                         logOut();
-                         closeMobileMenu();
-                         setModalOpen(false);
-                       }}
+                    <a
+                      href="/login"
+                      className="nav-links"
+                      onClick={() => {
+                        logOut();
+                        closeMobileMenu();
+                        setModalOpen(false);
+                      }}
                     >
                       Log out
                     </a>
                   </li>
                 </>
-
               ) : (
                 <>
-
                   <li className="nav-item">
                     <NavLink
                       to="/login"
-                      className={({ isActive }) =>
-                        "nav-links" + (isActive ? " activated" : "")
-                      }
+                      className={({ isActive }) => "nav-links" + (isActive ? " activated" : "")}
                       onClick={() => {
                         closeMobileMenu();
                         setModalOpen(false);
@@ -183,13 +181,10 @@ function Navbar() {
                       Login
                     </NavLink>
                   </li>
-
                   <li className="nav-item">
                     <NavLink
                       to="/register"
-                      className={({ isActive }) =>
-                        "nav-links" + (isActive ? " activated" : "")
-                      }
+                      className={({ isActive }) => "nav-links" + (isActive ? " activated" : "")}
                       onClick={() => {
                         closeMobileMenu();
                         setModalOpen(false);
@@ -198,7 +193,6 @@ function Navbar() {
                       Sign Up
                     </NavLink>
                   </li>
-
                 </>
               )}
             </ul>

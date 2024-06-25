@@ -34,6 +34,8 @@ import AdminMedicList from "./routes/admin/medic/AdminMedicList";
 import AdminMedicDetails from "./routes/admin/medic/AdminMedicDetails";
 import RegisterMedic from "./routes/admin/medic/RegisterMedic";
 import CancelAppointment from "./components/password/CancelAppointment";
+import UserPetsConsultations from "./routes/medic/patient/patient-details/PetsDetails";
+
 
 function App() {
   const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
@@ -87,6 +89,7 @@ function App() {
           <Route path="/appointment" element={<AppointmentPage />} />
           <Route path="/medics" element={<Medics />} />
           <Route path="/cancel-appointment/:appointmentId" element={<CancelAppointment />} />
+          <Route path="/user/pets-consultations" element={<UserPetsConsultations />} />
           {!isLoggedIn && (
             <>
               <Route path="/forgot-password" element={<ForgotPassword />} />
