@@ -18,7 +18,7 @@ function EditProcedure() {
   });
 
   const [specializationOptions, setSpecializationOptions] = useState([
-    'PATHOLOGIST', 'SMALL_ANIMAL', 'ANESTHESIOLOGY', 'DENTISTRY', 'SURGERY'
+    'PATHOLOGIST', 'SMALL_ANIMAL', 'ANESTHESIOLOGY', 'DENTISTRY', 'SURGERY', 'DERMATOLOGY', 'EMERGENCY_AND_CRITICAL_CARE', 'GROOMING', 'NUTRITION', 'VACCINOLOGY'
   ]);
 
   useEffect(() => {
